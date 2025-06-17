@@ -1,80 +1,6 @@
-/* Table styling for scenario page */
-.styled-table {
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 1rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  min-width: 300px;
-  box-shadow: 0 0 10px rgba(0, 77, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
+html {
+  scroll-behavior: smooth;
 }
-
-.styled-table thead tr {
-  background-color: #004d00;
-  color: #ffffff;
-  text-align: left;
-  font-weight: bold;
-}
-
-.styled-table th,
-.styled-table td {
-  padding: 12px 15px;
-  border-bottom: 1px solid #dddddd;
-}
-
-.styled-table tbody tr:nth-of-type(even) {
-  background-color: #f3f9f3;
-}
-
-.styled-table tbody tr:last-of-type {
-  border-bottom: 2px solid #004d00;
-}
-
-/* Button styling for scenario page */
-.cta-button {
-  background-color: #004d00;
-  color: #ffcc00;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-right: 15px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #003300;
-}
-
-.cta-button {
-  display: flex;
-  align-items: center;
-  font-size: 1.4rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-decoration: none;
-  color: #fff;
-  transition: all 0.3s ease;
-}
-  
-  .logo img {
-  height: 45px;
-  margin-right: 10px;
-  transition: all 0.3s ease;
-  }
-  
-  .logo span {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-  margin-left: 10px;
-  letter-spacing: 1px;
-  display: inline-block;
-  vertical-align: middle;
-  }
 /* ====== ENHANCED NAVIGATION ====== */
 nav {
   flex: 1;
@@ -206,26 +132,58 @@ nav ul li ul.dropdown li a:hover {
   padding-left: 20px;
 }
 
-/* Improved Hamburger Menu */
+/* Hamburger menu styles */
 .hamburger {
-  display: none;
+  display: none; /* Hidden by default on desktop */
   flex-direction: column;
-  cursor: pointer;
+  justify-content: space-around;
   width: 30px;
-  height: 22px;
-  justify-content: space-between;
-  z-index: 1001;
-  transition: all 0.3s ease;
+  height: 21px;
+  cursor: pointer;
 }
 
 .hamburger div {
-  background-color: #fff;
-  height: 4px;
   width: 100%;
-  border-radius: 2px;
+  height: 3px;
+  background-color: #333;
   transition: all 0.3s ease;
 }
 
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  #nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background: #078925;
+    transition: all 0.5s ease;
+    padding-top: 70px;
+    z-index: 100;
+  }
+  
+  #nav-menu.active {
+    left: 0;
+  }
+  
+  /* Optional: Animate hamburger to X when active */
+  .hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}
 /* Mobile Navigation Enhancements */
 @media (max-width: 1024px) {
   nav {
@@ -301,31 +259,9 @@ nav ul li ul.dropdown li a:hover {
     max-height: 500px;
   }
   
-  .hamburger {
-    display: flex;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 50px;
-    height: 38px;
-    transform: none;
-    padding: 5px; /* added padding for better clickable area */
-    z-index: 1002;
-  }
+
   
-  /* Improved hamburger animation */
-  .hamburger.active div:nth-child(1) {
-    transform: translateY(12px) rotate(45deg);
-  }
-  
-  .hamburger.active div:nth-child(2) {
-    opacity: 0;
-    transform: translateX(-25px);
-  }
-  
-  .hamburger.active div:nth-child(3) {
-    transform: translateY(-12px) rotate(-45deg);
-  }
+
   
   /* Overlay when mobile menu is open */
   .overlay {
@@ -753,6 +689,25 @@ footer::before {
     font-size: 1.6rem;
   }
 }
+
+/* Fix min-width issues and add horizontal scroll for tables on small screens */
+@media (max-width: 480px) {
+  .styled-table {
+    min-width: 100% !important;
+    overflow-x: auto;
+    display: block;
+  }
+
+  .container,
+  .team-member,
+  .footer-about,
+  .footer-contact,
+  .footer-links,
+  .footer-column {
+    min-width: auto !important;
+    width: 100% !important;
+  }
+}
 /* Reset and base styles */
 * {
   box-sizing: border-box;
@@ -964,24 +919,100 @@ nav ul li ul.dropdown li a:hover {
 }
 
 /* Improved Hamburger Menu */
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header Styles */
+.header {
+  background: #0d1117;
+  color: #ffffff;
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #1f6feb;
+}
+
+/* Hamburger Styles */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  width: 30px;
-  height: 22px;
-  justify-content: space-between;
-  z-index: 1001;
-  transition: all 0.3s ease;
+  gap: 5px;
 }
 
-.hamburger div {
-  background-color: #fff;
+.hamburger span {
+  width: 25px;
   height: 3px;
-  width: 100%;
+  background: white;
   border-radius: 2px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #161b22;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
 
 /* Mobile Navigation Enhancements */
 @media (max-width: 960px) {
@@ -1431,6 +1462,29 @@ footer::before {
   box-shadow: 0 6px 18px rgba(0, 77, 0, 0.1);
   margin-bottom: 40px;
   text-align: center;
+}
+
+/* Fix Instagram section on tablets */
+@media (min-width: 600px) and (max-width: 900px) {
+  .instagram-post {
+    min-width: 220px;
+  }
+  .instagram-feed {
+    overflow: visible !important;
+  }
+  .instagram-carousel {
+    overflow: visible !important;
+  }
+}
+
+/* Hide scrollbar for instagram-carousel */
+.instagram-carousel {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.instagram-carousel::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
 }
 
 .instagram-feed h2 {
@@ -2122,202 +2176,136 @@ footer::before {
   }
 }
 
-/* About Our Team Section */
-.team-intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 40px;
-  gap: 20px;
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hero-banner h1 {
+    font-size: 2.2rem;
+  }
 }
 
-.team-intro img {
-  border-radius: 12px;
-  max-width: 400px;
-  width: 100%;
-  box-shadow: 0 6px 18px rgba(0, 77, 0, 0.15);
-}
-
-.team-intro p {
-  font-size: 1.1rem;
-  color: #555;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-.team-members {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-bottom: 60px;
-}
-
-.team-member {
-  background-color: #f9f9f9;
-  border: 2px solid #004d00;
-  border-radius: 12px;
-  padding: 20px 25px;
-  width: 280px;
-  box-shadow: 0 8px 20px rgba(0, 77, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.team-member:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 77, 0, 0.2);
-}
-
-.team-member h2 {
-  color: #004d00;
-  font-size: 1.5rem;
-  margin-bottom: 8px;
-  font-weight: 700;
-}
-
-.team-member p {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 6px;
-  font-style: normal;
-}
-
-.team-member p em {
-  font-style: italic;
-  color: #006600;
-}
-
-/* Responsive adjustments for team section */
 @media (max-width: 768px) {
-  .team-members {
+  .header-container {
+    padding: 15px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--white);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    z-index: 1000;
+    padding-top: 80px;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav ul {
     flex-direction: column;
-    align-items: center;
+    padding: 20px;
   }
 
-  .team-member {
-    width: 90%;
-    max-width: 400px;
+  nav ul li {
+    margin: 0 0 15px 0;
+  }
+
+  nav ul li a {
+    padding: 10px;
+  }
+
+  .dropdown {
+    position: static;
+    box-shadow: none;
+    display: none;
+    padding: 10px 0 0 20px;
+  }
+
+  .has-dropdown:hover .dropdown {
+    display: none;
+  }
+
+  .dropdown.active {
+    display: block;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
+  .hero-banner {
+    height: 60vh;
+    min-height: 400px;
+    margin-top: 70px;
+  }
+
+  .hero-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .mission-vision-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .mission-vision-section h2 {
+    font-size: 1.5rem;
   }
 }
 
-/* Added styles for Project Scenario page table and buttons */
-.styled-table {
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 1rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  min-width: 300px;
-  box-shadow: 0 0 10px rgba(0, 77, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
+@media (max-width: 480px) {
+  .hero-banner h1 {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .instagram-feed h2 {
+    font-size: 1.8rem;
+  }
+
+  .instagram-post {
+    min-width: 280px;
+  }
+
+  .mission-vision-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .mission-vision-section p,
+  .mission-vision-section ul {
+    font-size: 1rem;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
 }
 
-.styled-table thead tr {
-  background-color: #004d00;
-  color: #ffffff;
-  text-align: left;
-  font-weight: bold;
+/* Animation for hamburger menu when active */
+.hamburger.active div:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
 }
 
-.styled-table th,
-.styled-table td {
-  padding: 12px 15px;
-  border-bottom: 1px solid #dddddd;
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
 }
 
-.styled-table tbody tr:nth-of-type(even) {
-  background-color: #f3f9f3;
+.hamburger.active div:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
 }
-
-.styled-table tbody tr:last-of-type {
-  border-bottom: 2px solid #004d00;
-}
-
-.cta-button {
-  background-color: #004d00;
-  color: #ffcc00;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-right: 15px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #003300;
-}
-
-/* FAQ Section Styles */
-.faq-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #004d00;
-  }
-  
-  .faq-item {
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 15px;
-  }
-  
-  .faq-question {
-  background-color: #e6f2e6;
-  border: none;
-  width: 100%;
-  text-align: left;
-  font-size: 1.2rem;
-  font-weight: 700;
-  padding: 15px 20px;
-  cursor: pointer;
-  color: #004d00;
-  display: flex;
-  align-items: center;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-  }
-  
-  .faq-question:hover,
-  .faq-question[aria-expanded="true"] {
-  background-color: #cde6cd;
-  }
-  
-  .faq-answer {
-  padding: 10px 20px 0 40px;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #003300;
-  }
-  
-  .faq-answer ul {
-  list-style-type: disc;
-  margin-left: 20px;
-  margin-top: 10px;
-  }
-  
-  .faq-icon {
-  margin-right: 12px;
-  color: #004d00;
-  font-size: 1.3rem;
-  flex-shrink: 0;
-  }
-  
-  /* Link styling inside FAQ answers */
-  .faq-answer a {
-  color: #004d00;
-  text-decoration: underline;
-  font-weight: 600;
-  }
-  
-  .faq-answer a:hover {
-  color: #006600;
-  text-decoration: none;
-  }
-

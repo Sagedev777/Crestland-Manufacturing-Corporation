@@ -12,6 +12,184 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="footer-hide-on-scroll.js" defer></script>
     <script src="menu-toggle.js" defer></script>
+    <link rel="shortcut icon" href="assets/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <script src="script.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+            /* Project Concept Page Styles */
+      .concept-page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+      
+      .concept-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      
+      .concept-header h1 {
+        font-size: 2.5rem;
+        color: #2c502e;
+        margin-bottom: 1rem;
+      }
+      
+      .concept-header p {
+        font-size: 1.2rem;
+        color: #555;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      .vision-statement {
+        background: #e8f4fc;
+        padding: 2rem;
+        border-radius: 8px;
+        margin-bottom: 3rem;
+        text-align: center;
+        border-left: 5px solid #29b941;
+      }
+      
+      .vision-statement blockquote {
+        font-size: 1.4rem;
+        font-style: italic;
+        color: #2e502c;
+        margin: 0;
+      }
+      
+      .vision-statement cite {
+        display: block;
+        margin-top: 1rem;
+        font-weight: 600;
+        color: #30b929;
+      }
+      
+      .industry-showcase {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+      
+      .industry-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+      }
+      
+      .industry-card:hover {
+        transform: translateY(-5px);
+      }
+      
+      .industry-card img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #eee;
+      }
+      
+      .industry-card h3 {
+        padding: 1rem 1.5rem 0;
+        color: #29b929;
+        margin: 0;
+      }
+      
+      .industry-card p {
+        padding: 0.5rem 1.5rem 1.5rem;
+        color: #555;
+        margin: 0;
+      }
+      
+      .supply-chain {
+        background: #f9f9f9;
+        padding: 2rem;
+        border-radius: 8px;
+        margin-bottom: 3rem;
+      }
+      
+      .supply-chain h2 {
+        color: #2c502f;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      
+      .process-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+      
+      .process-step {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 6px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      }
+      
+      .process-step h3 {
+        color: #35b929;
+        margin-top: 0;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 0.5rem;
+      }
+      
+      .process-step ul {
+        padding-left: 1.2rem;
+      }
+      
+      .process-step li {
+        margin-bottom: 0.5rem;
+      }
+      
+      .business-insight {
+        background: #33502c;
+        color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+      }
+      
+      .business-insight blockquote {
+        font-size: 1.3rem;
+        font-style: italic;
+        margin: 0 0 1.5rem 0;
+      }
+      
+      .business-insight cite {
+        display: block;
+        text-align: right;
+        font-weight: 600;
+      }
+      
+      .business-updates {
+        background: #f1f5f9;
+        padding: 1.5rem;
+        border-radius: 8px;
+      }
+      
+      .business-updates h3 {
+        color: #2c502e;
+        margin-top: 0;
+      }
+      
+      @media (max-width: 768px) {
+        .concept-header h1 {
+          font-size: 2rem;
+        }
+        
+        .vision-statement blockquote {
+          font-size: 1.2rem;
+        }
+        
+        .industry-showcase {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Enhanced Header -->
@@ -19,7 +197,7 @@
   <div class="header-container">
     <a href="index.html" class="logo">
       <img src="assets/LOGO-removebg-preview.png" alt="Logo" style="width: 150px; height: auto;">
-      <span>Crestland Manufacturing Corporation (CMC)</span>
+      <!--<span>Crestland Manufacturing Corporation (CMC)</span>-->
     </a>
     
     <div class="hamburger" id="hamburger">
@@ -35,16 +213,7 @@
                 <i class="fas fa-home"></i> Home
               </a>
             </li>
-            <li class="has-dropdown">
-              <a href="#">
-                <i class="fas fa-user"></i> About
-              </a>
-              <ul class="dropdown">
-                <li><a href="bio.html">Our Story</a></li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="mission.html">Mission & Vision</a></li>
-              </ul>
-            </li>
+            <li><a href="bio.html">Bibliography</a></li>
             <li>
               <a href="project.html" class="active">
                 <i class="fas fa-project-diagram"></i> Projects
@@ -76,94 +245,119 @@
 </header>
 <div class="overlay" id="overlay"></div>
 
-    <main>
-      <section class="project-concept">
-        <h1>Project Concept</h1>
-        <div class="before-after-container">
-          <h2>Before &amp; After: Cotton Value Chain Transformation</h2>
-          <h3>Powered by EDC’s Agro-Industrial Expertise</h3>
-
-          <div class="before-after-section">
-            <h4>1. Raw Cotton → High-End Textiles</h4>
-            <div class="before-after-pair">
-              <figure>
-                <img src="assets/raw-cotton-bales.jpg" alt="Unprocessed cotton bales piled at a local market" />
-                <figcaption><em>85% of Uganda’s cotton exported raw (FAO 2023). Avg price: $0.50/kg.</em></figcaption>
-              </figure>
-              <div class="overlay-text">Before (Uganda’s Current Reality)</div>
-            </div>
-            <div class="before-after-pair">
-              <figure>
-                <img src="assets/finished-organic-fabric.jpg" alt="Finished organic fabric rolls with EDC-Certified tags" />
-                <figcaption><em>EDC’s model: Locally processed textiles for EU markets. Price: $5.20/kg.</em></figcaption>
-              </figure>
-              <div class="overlay-text">After (EDC/CMC Intervention)</div>
-            </div>
-            <div class="overlay-text" style="font-weight: 900; font-size: 1.2rem; margin-top: 10px;">10X value increase (animated arrow graphic)</div>
+    <main class="concept-page">
+      <div class="concept-header">
+        <h1>Uganda's Industrial Transformation</h1>
+        <p>Discover how Crestland Manufacturing Corporation is revolutionizing Uganda's cotton, agriculture, and export industries through strategic development and vertical integration.</p>
+      </div>
+      
+      <!-- Vision Statement -->
+      <div class="vision-statement">
+        <blockquote>"Uganda has all the basic requirements to foster a World-Class Cotton Manufacturing Industry."</blockquote>
+        <cite>- DANIEL WILDER, EVOLUTIONARY DEVELOPMENT CONSULTANTS, FOUNDER</cite>
+        <img src="assets/IMG-20250605-WA0042.jpg" alt="Uganda Cotton Industry Potential" style="max-width: 600px; width: 100%; margin-top: 2rem; border-radius: 4px;">
+      </div>
+      
+      <!-- Industry Showcase -->
+      <h2 style="text-align: center; color: #2c3e50; margin-bottom: 1.5rem;">Uganda's Burgeoning Industries</h2>
+      <div class="industry-showcase">
+        <div class="industry-card">
+          <img src="assets/IMG-20250605-WA0043.jpg" alt="Uganda's Cotton Industry Transformation">
+          <h3>Cotton Industries</h3>
+          <p>Transforming raw cotton into high-value textiles and garments for domestic and international markets.</p>
+        </div>
+        
+        <div class="industry-card">
+          <img src="assets/IMG-20250605-WA0044.jpg" alt="Uganda's Agriculture Industry Transformation">
+          <h3>Agriculture Industries</h3>
+          <p>Modernizing farming practices and supply chains to increase productivity and farmer incomes.</p>
+        </div>
+        
+        <div class="industry-card">
+          <img src="assets/IMG-20250605-WA0045.jpg" alt="Uganda's Export Industry Transformation">
+          <h3>Export Industries</h3>
+          <p>Expanding Uganda's global trade footprint through value-added manufactured goods.</p>
+        </div>
+      </div>
+      
+      <!-- Supply Chain Process -->
+      <div class="supply-chain">
+        <h2>Integrated Supply Chain Process</h2>
+        <img src="assets/IMG-20250605-WA0047.jpg" alt="Supply Chain Processes" style="width: 100%; max-width: 800px; display: block; margin: 0 auto 2rem; border-radius: 6px;">
+        
+        <div class="process-steps">
+          <div class="process-step">
+            <h3>Farms</h3>
+            <ul>
+              <li><strong>Grower Societies:</strong> Organized farmer networks producing premium cotton</li>
+              <li>Contract farming with guaranteed prices</li>
+              <li>Sustainable agricultural practices</li>
+            </ul>
           </div>
-
-          <div class="before-after-section">
-            <h4>2. Cottonseed Waste → Profitable Byproducts</h4>
-            <div class="before-after-pair">
-              <figure>
-                <img src="assets/cottonseed-waste.jpg" alt="Discarded cottonseeds rotting near ginneries" />
-                <figcaption>30% of harvest wasted (Uganda Cotton Board).</figcaption>
-              </figure>
-              <div class="overlay-text">Before</div>
-            </div>
-            <div class="before-after-pair">
-              <figure>
-                <img src="assets/cottonseed-oil-packaging.jpg" alt="CMC-branded cottonseed oil and biodegradable packaging" />
-                <figcaption><em>EDC’s zero-waste system: $12M revenue potential from byproducts.</em></figcaption>
-              </figure>
-              <div class="overlay-text">After</div>
-            </div>
+          
+          <div class="process-step">
+            <h3>Processing</h3>
+            <ul>
+              <li><strong>Spinning Mill:</strong> Converts raw cotton into yarn</li>
+              <li><strong>Weaving Mill:</strong> Produces textile fabric</li>
+              <li>Cleaning and dyeing facilities</li>
+            </ul>
           </div>
-
-          <div class="before-after-section">
-            <h4>3. Subsistence Farming → Commercial Outgrower Network</h4>
-            <div class="before-after-pair">
-              <figure>
-                <img src="assets/struggling-farmer.jpg" alt="Smallholder farmer with struggling crop" />
-                <figcaption><em>Pre-EDC: 1.2 tons/hectare, no price security.</em></figcaption>
-              </figure>
-              <div class="overlay-text">Before</div>
-            </div>
-            <div class="before-after-pair">
-              <figure>
-                <img src="assets/farmer-group-contracts.jpg" alt="Farmer group signing contracts with EDC agronomist" />
-                <figcaption><em>EDC’s outgrower program: 3.5 tons/hectare, guaranteed purchases.</em></figcaption>
-              </figure>
-              <div class="overlay-text">After</div>
-            </div>
+          
+          <div class="process-step">
+            <h3>Manufacturing</h3>
+            <ul>
+              <li><strong>Clothing Line 1:</strong> Jeans</li>
+              <li><strong>Clothing Line 2:</strong> T-shirts</li>
+              <li><strong>Clothing Line 3:</strong> Dresses</li>
+              <li>Pattern making and tailoring</li>
+            </ul>
           </div>
-
-          <div class="infographic">
-            <h2>Best-case Scenario</h2>
-            <p>Projected jobs per sector (e.g., farming, factories).</p>
-            <!-- Placeholder for infographic -->
+          
+          <div class="process-step">
+            <h3>Distribution</h3>
+            <ul>
+              <li>Export logistics network</li>
+              <li>Wholesale distribution channels</li>
+              <li>Domestic retail partnerships</li>
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
+      
+      <!-- Business Insight -->
+      <div class="business-insight">
+        <blockquote>"Uganda must strategically increase diversity in garments imports to improve market stability and stimulate growth."</blockquote>
+        <cite>— Daniel R. Wilder, on UBC</cite>
+        <img src="assets/IMG-20250605-WA0046.jpg" alt="Business Today Updates" style="width: 100%; max-width: 600px; margin-top: 1.5rem; border-radius: 4px;">
+      </div>
+      
+      <div class="business-updates">
+        <h3>BUSINESS TODAY UPDATES:</h3>
+        <ul>
+          <li><strong>BUSINESS INSIGHT:</strong> Analysis of Uganda's textile market potential</li>
+          <li><strong>GOVERNMENT COMMITTED TO SUPPORT UBC:</strong> Policy initiatives for industry growth</li>
+          <li><strong>BREAKING NEWS:</strong> International partnerships in development</li>
+        </ul>
+      </div>
     </main>
-
     <!-- Enhanced Footer -->
 <footer>
   <div class="footer-container">
     <div class="footer-main">
       <div class="footer-about">
         <div class="footer-logo">
-          <span>Crestland Manufacturing Corporation (CMC)</span>
+          <span> Crestland Manufacturing Corporation (CMC)</span>
         </div>
         <p>We're dedicated to making a positive impact in Uganda through innovative solutions and community engagement initiatives that address local challenges.</p>
-        
+        <!--
         <h4 class="footer-heading">Newsletter</h4>
         <div class="newsletter-form">
           <form>
             <input type="email" placeholder="Your email address">
             <button type="submit">Subscribe</button>
           </form>
-        </div>
+        </div>-->
       </div>
       
       <div class="footer-contact">
@@ -174,24 +368,13 @@
         </div>
         <div class="contact-item">
           <i class="fas fa-phone"></i>
-          <p><a href="tel:+256700123456">+256 756 591 194</a></p>
+          <p><a href="tel:+256700123456">+256 748100181</a></p>
         </div>
         <div class="contact-item">
           <i class="fas fa-envelope"></i>
           <p><a href="mailto:info@crestland.org">info@crestland.org</a></p>
         </div>
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <p><a href="mailto:contact@crestland.org">contact@crestland.org</a></p>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <p><a href="mailto:drw@crestland.org">drw@crestland.org</a></p>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <p><a href="mailto:projects@crestland.org">projects@crestland.org</a></p>
-        </div>
+        
         <div class="contact-item">
           <i class="fas fa-clock"></i>
           <p>Mon - Fri: 8:00 AM - 5:00 PM</p>
@@ -203,87 +386,34 @@
           <h4 class="footer-heading">Quick Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
+            <!--<li><a href="about.html">About Us</a></li>-->
+
             <li><a href="project.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-        
+        <!--
         <div class="footer-column">
           <h4 class="footer-heading">Resources</h4>
           <ul>
-            <li><a href="blog.html">Blog</a></li>
+
             <li><a href="faq.html">FAQ</a></li>
-            <!--<li><a href="resources.html">Resource Center</a></li>
-            <li><a href="gallery.html">Gallery</a></li>-->
+
             <li><a href="testimonials.html">Testimonials</a></li>
           </ul>
-        </div>
+        </div>-->
       </div>
     </div>
     
       <div class="footer-bottom">
         <div class="social-icons">
-          <a
-            href="https://www.facebook.com/yourpage"
-            target="_blank"
-            rel="noopener"
-            aria-label="Facebook"
-            class="social-icon"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="#3b5998"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.325v21.351c0 .732.592 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.672c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.59l-.467 3.622h-3.123v9.294h6.116c.732 0 1.324-.592 1.324-1.324v-21.35c0-.733-.592-1.325-1.324-1.325z"
-              />
-            </svg>
+          
+          
+          <a href="https://www.instagram.com/evolutionarydevelopmentconsult" class="social-icon">
+                            <i class="fab fa-instagram"></i>
           </a>
           <a
-            href="https://twitter.com/yourprofile"
-            target="_blank"
-            rel="noopener"
-            aria-label="Twitter"
-            class="social-icon"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="#1da1f2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724c-.951.564-2.005.974-3.127 1.195a4.916 4.916 0 00-8.38 4.482c-4.083-.205-7.702-2.159-10.126-5.134a4.822 4.822 0 00-.664 2.475c0 1.708.87 3.216 2.188 4.099a4.904 4.904 0 01-2.228-.616c-.054 1.997 1.388 3.868 3.444 4.29a4.935 4.935 0 01-2.224.084c.626 1.956 2.444 3.377 4.6 3.417a9.867 9.867 0 01-6.102 2.104c-.396 0-.787-.023-1.17-.067a13.945 13.945 0 007.557 2.212c9.054 0 14.002-7.496 14.002-13.986 0-.21 0-.423-.015-.633a9.936 9.936 0 002.457-2.548l-.047-.02z"
-              />
-            </svg>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/yourprofile"
-            target="_blank"
-            rel="noopener"
-            aria-label="LinkedIn"
-            class="social-icon"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="#0077b5"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.039-1.852-3.039-1.853 0-2.136 1.445-2.136 2.939v5.669h-3.554v-11.5h3.414v1.571h.049c.476-.9 1.637-1.852 3.37-1.852 3.602 0 4.268 2.37 4.268 5.455v6.326zm-14.693-13.04c-1.144 0-2.07-.927-2.07-2.07 0-1.144.926-2.07 2.07-2.07 1.144 0 2.07.926 2.07 2.07 0 1.143-.926 2.07-2.07 2.07zm1.777 13.04h-3.554v-11.5h3.554v11.5zm16.469-20.452h-22.451c-.828 0-1.5.672-1.5 1.5v21.451c0 .828.672 1.5 1.5 1.5h22.451c.828 0 1.5-.672 1.5-1.5v-21.451c0-.828-.672-1.5-1.5-1.5z"
-              />
-            </svg>
-          </a>
-          <a
-            href="https://wa.me/yourwhatsapplink"
+            href="https://wa.me/+256748100181?text=Hello,%20I%20want%20to%20learn%20more!%20about%20CMC"
             target="_blank"
             rel="noopener"
             aria-label="WhatsApp"
@@ -310,8 +440,8 @@
       <div class="copyright">
         <p>&copy; 2025 Crestland Manufacturing Corporation (CMC). All Rights Reserved.</p>
       </div>
-      
-      <!--<div class="footer-legal">
+      <!--
+      <div class="footer-legal">
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
         <a href="cookies.html">Cookie Policy</a>
